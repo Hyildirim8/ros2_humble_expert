@@ -48,4 +48,8 @@ qtcreator-*
 .#*
 
 # Catkin custom files
+<<<<<<< HEAD
 CATKIN_IGNORE
+=======
+CATKIN_IGNORE
+>>>>>>> 86b9937 (first-commit)

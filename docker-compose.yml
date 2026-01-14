@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  ros2-humble:
+    build:
+      context: .
+      args:
+        USER_ID: ${UID:-1000}
+        GROUP_ID: ${GID:-1000}
+        USERNAME: ${USER:-master}
+    container_name: ros2-humble-dev
+    image: ros2-humble-dev:latest
+    stdin_open: true
+    tty: true
+    network_mode: host
+    privileged: true
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - ./workspace:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ~/.Xauthority:/home/${USER:-master}/.Xauthority:rw
+    working_dir: /workspace
+    command: /bin/bash
