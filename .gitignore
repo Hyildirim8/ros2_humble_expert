@@ -53,3 +53,8 @@ CATKIN_IGNORE
 =======
 CATKIN_IGNORE
 >>>>>>> 86b9937 (first-commit)
+
+build/
+install/
+log/
+.vscode/
