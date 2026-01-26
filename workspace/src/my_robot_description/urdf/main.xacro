@@ -3,4 +3,5 @@
 
     <xacro:include filename="properties.xacro" />
     <xacro:include filename="my_robot.xacro" />
+    <xacro:include filename="properties_gazebo.xacro" />
 </robot>
